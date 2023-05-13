@@ -4,7 +4,11 @@
 # tv2's channel is 3 and volume level is 2
 
 # create class
-# create class instances
+class TV:
+    def __init__(self, channel, volume_level, on_off):   # create class instances
+        self.channel = channel
+        self.volume_level = volume_level
+        self.on_off = on_off
 # create required methods
 # create objects
 # call methods
