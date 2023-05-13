@@ -2,3 +2,9 @@
 # that will create two objects from Class TV and will produce the following output:
 # tv1's channel is 30 and volume level is 3
 # tv2's channel is 3 and volume level is 2
+
+# create class
+# create class instances
+# create required methods
+# create objects
+# call methods
