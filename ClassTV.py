@@ -46,6 +46,9 @@ class TV:
         self.volume_level = self.volume_level - 1
         return self.channel
 
+    def print_details(self):
+        print(f"{self.name}'s channel is {self.channel} and volume level is {self.volume_level}.")
+
 
 # create objects
 tv1 = TV("tv1", 30, 2, "off")
