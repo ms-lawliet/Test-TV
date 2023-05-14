@@ -9,3 +9,4 @@ tv1 = TV("tv1", 30, 2, "off")  # create objects
 tv2 = TV("tv2", 3, 2, "on")
 
 # call methods
+tv1.get_channel()
