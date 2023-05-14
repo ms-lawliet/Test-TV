@@ -24,5 +24,7 @@ class TV:
     def set_channel(self, new_channel):
         self.channel = new_channel
 
+    def get_volume(self):
+        print(f"{self.name}'s volume level is {self.volume_level}.")
 # create objects
 # call methods
