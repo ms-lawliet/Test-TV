@@ -5,8 +5,14 @@
 
 from ClassTV import TV    # import class TV from ClassTV.py file
 
-tv1 = TV("tv1", 30, 2, "off")  # create objects
-tv2 = TV("tv2", 3, 2, "on")
+name = input("Enter name of tv: ")
+channel = int(input("Choose channel from 1-30: "))
+volume_level = int(input("Choose volume level from 0-7: "))
+on_off = input("Would you like to turn on your tv? (on or off) ")
+
+tv1 = TV(name, channel, volume_level, on_off)  # create objects
+tv2 = TV(name, channel, volume_level, on_off)
 
 # call methods
 tv1.get_channel()
+tv1.print_details()
