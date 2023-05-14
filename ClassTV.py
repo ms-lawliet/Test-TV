@@ -13,10 +13,12 @@ class TV:
 
 # create required methods
     def turn_on(self):
-        return
+        self.on_off = "on"
+        return "TV is turned on."
 
     def turn_off(self):
-        return
+        self.on_off = "off"
+        return "TV is turned off."
 
     def get_channel(self):
         print(f"{self.name}'s channel is {self.channel}.")
