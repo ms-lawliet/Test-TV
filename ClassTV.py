@@ -20,6 +20,9 @@ class TV:
 
     def get_channel(self):
         print(f"{self.name}'s channel is {self.channel}.")
-        
+
+    def set_channel(self, new_channel):
+        self.channel = new_channel
+
 # create objects
 # call methods
