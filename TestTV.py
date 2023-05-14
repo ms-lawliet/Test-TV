@@ -11,7 +11,8 @@ try:
     volume_level = int(input("Choose volume level from 0-7: "))
     on_off = input("Would you like to turn on your tv? (on or off) ")
 
-    tv1 = TV(name, channel, volume_level, on_off)  # create objects
+    # create objects
+    tv1 = TV(name, channel, volume_level, on_off)
     tv2 = TV(name, channel, volume_level, on_off)
 
     # call methods
