@@ -27,6 +27,9 @@ class TV:
     def get_volume(self):
         print(f"{self.name}'s volume level is {self.volume_level}.")
 
+    def set_volume(self, new_volume):
+        self.volume_level = new_volume
+
 
 # create objects
 tv1 = TV("tv1", 30, 2, "off")
