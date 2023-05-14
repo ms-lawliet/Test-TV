@@ -18,5 +18,8 @@ class TV:
     def turn_off(self):
         return
 
+    def get_channel(self):
+        print(f"{self.name}'s channel is {self.channel}.")
+        
 # create objects
 # call methods
