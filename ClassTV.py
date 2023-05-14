@@ -34,6 +34,10 @@ class TV:
         self.channel = self.channel + 1
         return self.channel
 
+    def channel_down(self):
+        self.channel = self.channel - 1
+        return self.channel
+
 
 # create objects
 tv1 = TV("tv1", 30, 2, "off")
