@@ -30,10 +30,13 @@ class TV:
     def set_volume(self, new_volume):
         self.volume_level = new_volume
 
+    def channel_up(self):
+        self.channel = self.channel + 1
+        return self.channel
+
 
 # create objects
 tv1 = TV("tv1", 30, 2, "off")
 
 # call methods
 tv1.get_volume()
-
