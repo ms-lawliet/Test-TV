@@ -38,6 +38,10 @@ class TV:
         self.channel = self.channel - 1
         return self.channel
 
+    def volume_up(self):
+        self.volume_level = self.volume_level + 1
+        return self.channel
+
 
 # create objects
 tv1 = TV("tv1", 30, 2, "off")
