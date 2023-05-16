@@ -28,6 +28,8 @@ class TV:
             self.channel = new_channel
         elif ask_channel == "no":
             print("Thank you.")
+        else:
+            raise Exception("Yes or no only.")
 
     # get volume level of tv
     def get_volume(self):
@@ -41,6 +43,8 @@ class TV:
             self.volume_level = new_volume
         elif ask_volume == "no":
             print("Thank you.")
+        else:
+            raise Exception("Yes or no only.")
 
     # change to next channel
     def channel_up(self):
@@ -65,3 +69,19 @@ class TV:
     # print details
     def print_details(self):
         print(f"{self.name}'s channel is {self.channel} and volume level is {self.volume_level}.")
+
+    # print list of class TV functions
+    def func_list(self):
+        method_list = input("Would you like to see other available tv functions? ").lower()
+        if method_list == "yes":
+            for func in dir(TV):
+                if func.startswith('__'):
+                    continue
+                else:
+                    print(func)
+        elif method_list == "no":
+            print("Thank you!")
+            exit()
+        else:
+            raise Exception("Yes or no only.")
+
