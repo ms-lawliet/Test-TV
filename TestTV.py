@@ -5,7 +5,7 @@
 # tv1's channel is 30 and volume level is 3
 # tv2's channel is 3 and volume level is 2
 
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 
 from ClassTV import TV    # import class TV from ClassTV.py file
 
