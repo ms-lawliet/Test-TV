@@ -1,6 +1,6 @@
-# this is the separate file for the class
+# This is the separate file for the class
 
-from colorama import Fore, Back, Style
+from colorama import Fore
 
 
 class TV:   # create class
@@ -12,10 +12,12 @@ class TV:   # create class
 # create required methods
     # turn tv on
     def turn_on(self):
+        on = True
         return "TV is turned on."
 
     # turn tv off
     def turn_off(self):
+        on = False
         return "TV is turned off."
 
     # get tv channel
@@ -87,4 +89,3 @@ class TV:   # create class
             exit()
         else:
             raise Exception("Yes or no only.")
-
