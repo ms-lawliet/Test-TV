@@ -1,7 +1,9 @@
 # this is the separate file for the class
 
-# create class
-class TV:
+from colorama import Fore, Back, Style
+
+
+class TV:   # create class
     def __init__(self, name, channel, volume_level):   # create class instances
         self.name = name
         self.channel = channel
@@ -18,11 +20,11 @@ class TV:
 
     # get tv channel
     def get_channel(self):
-        print(f"{self.name}'s channel is {self.channel}.")
+        print(Fore.BLUE + f"{self.name}'s channel is {self.channel}.")
 
     # set/change tv channel
     def set_channel(self):
-        ask_channel = input("Would you like to change the channel? ").lower()
+        ask_channel = input(Fore.CYAN + "Would you like to change the channel? ").lower()
         if ask_channel == "yes":
             new_channel = input("Which channel do you like? (1-120) ")
             self.channel = new_channel
@@ -33,16 +35,16 @@ class TV:
 
     # get volume level of tv
     def get_volume(self):
-        print(f"{self.name}'s volume level is {self.volume_level}.")
+        print(Fore.BLUE + f"{self.name}'s volume level is {self.volume_level}.")
 
     # set/change volume level of tv
     def set_volume(self):
-        ask_volume = input("Would you like to change the volume level? ").lower()
+        ask_volume = input(Fore.CYAN + "Would you like to change the volume level? ").lower()
         if ask_volume == "yes":
             new_volume = input("Which volume level do you like? (1-7) ")
             self.volume_level = new_volume
         elif ask_volume == "no":
-            print("Thank you.")
+            pass
         else:
             raise Exception("Yes or no only.")
 
@@ -68,17 +70,18 @@ class TV:
 
     # print details
     def print_details(self):
-        print(f"{self.name}'s channel is {self.channel} and volume level is {self.volume_level}.")
+        print(Fore.BLUE + f"{self.name}'s channel is {self.channel} and volume level is {self.volume_level}.")
 
     # print list of class TV functions
     def func_list(self):
-        method_list = input("Would you like to see other available tv functions? ").lower()
+        method_list = input(Fore.RESET + "Would you like to see other available tv functions? ").lower()
         if method_list == "yes":
+            print(Fore.YELLOW + "List of available tv functions:")
             for func in dir(TV):
                 if func.startswith('__'):
                     continue
                 else:
-                    print(func)
+                    print(Fore.GREEN + func)
         elif method_list == "no":
             print("Thank you!")
             exit()
