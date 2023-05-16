@@ -13,12 +13,12 @@ class TV:   # create class
     # turn tv on
     def turn_on(self):
         on = True
-        return "TV is turned on."
+        print(Fore.RED + "The TV is turned on.")
 
     # turn tv off
     def turn_off(self):
         on = False
-        return "TV is turned off."
+        print(Fore.RED + "The TV is turned off.")
 
     # get tv channel
     def get_channel(self):
@@ -28,10 +28,13 @@ class TV:   # create class
     def set_channel(self):
         ask_channel = input(Fore.CYAN + "Would you like to change the channel? ").lower()
         if ask_channel == "yes":
-            new_channel = input("Which channel do you like? (1-120) ")
-            self.channel = new_channel
+            new_channel = int(input("Which channel do you like? (1-120) "))
+            if new_channel < 1 or new_channel > 120:
+                print("Out of range.")
+            else:
+                self.channel = new_channel
         elif ask_channel == "no":
-            print("Thank you.")
+            pass
         else:
             raise Exception("Yes or no only.")
 
@@ -43,8 +46,11 @@ class TV:   # create class
     def set_volume(self):
         ask_volume = input(Fore.CYAN + "Would you like to change the volume level? ").lower()
         if ask_volume == "yes":
-            new_volume = input("Which volume level do you like? (1-7) ")
-            self.volume_level = new_volume
+            new_volume = int(input("Which volume level do you like? (1-7) "))
+            if new_volume < 1 or new_volume > 7:
+                print("Out of range.")
+            else:
+                self.volume_level = new_volume
         elif ask_volume == "no":
             pass
         else:
@@ -53,22 +59,18 @@ class TV:   # create class
     # change to next channel
     def channel_up(self):
         self.channel = self.channel + 1
-        return self.channel
 
     # change to previous channel
     def channel_down(self):
         self.channel = self.channel - 1
-        return self.channel
 
     # increase volume level
     def volume_up(self):
         self.volume_level = self.volume_level + 1
-        return self.channel
 
     # decrease volume_level
     def volume_down(self):
         self.volume_level = self.volume_level - 1
-        return self.channel
 
     # print details
     def print_details(self):

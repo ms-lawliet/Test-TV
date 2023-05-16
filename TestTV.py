@@ -23,7 +23,7 @@ try:
         if volume_level > 7 or volume_level < 1:
             raise Exception("Out of range. Please try again.")
 
-        # create objects for class TV
+        # create an object for class TV
         tv = TV(name, channel, volume_level)
 
         # call methods
