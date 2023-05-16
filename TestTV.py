@@ -10,11 +10,13 @@ from ClassTV import TV    # import class TV from ClassTV.py file
 try:
     # ask for user input
     while True:
+        # tv name
         name = input("Enter name of tv: ")
+        # channel
         channel = int(input("Choose channel from 1-120: "))
         if channel < 1 or channel > 120:
             raise Exception("Out of range. Please try again.")
-
+        # volume_level
         volume_level = int(input("Choose volume level from 1-7: "))
         if volume_level > 7 or volume_level < 1:
             raise Exception("Out of range. Please try again.")
@@ -23,11 +25,10 @@ try:
         tv = TV(name, channel, volume_level)
 
         # call methods
-        tv.set_channel()
         tv.print_details()
 
         # ask user for more input
-        more_input = input("Would you like to try again? (yes or no) ")
+        more_input = input("Would you like to try again? (yes or no) ").lower()
         if more_input == "yes":
             continue
         elif more_input == "no":
