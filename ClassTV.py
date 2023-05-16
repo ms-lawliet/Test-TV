@@ -28,7 +28,7 @@ class TV:
 
     # set/change tv channel
     def set_channel(self):
-        ask_channel = input("Would you like to change the channel? ")
+        ask_channel = input("Would you like to change the channel? ").lower()
         if ask_channel == "yes":
             new_channel = input("Which channel do you like? (1-120) ")
             self.channel = new_channel
@@ -41,7 +41,7 @@ class TV:
 
     # set/change volume level of tv
     def set_volume(self):
-        ask_volume = input("Would you like to change the volume level? ")
+        ask_volume = input("Would you like to change the volume level? ").lower()
         if ask_volume == "yes":
             new_volume = input("Which volume level do you like? (1-7) ")
             self.volume_level = new_volume
