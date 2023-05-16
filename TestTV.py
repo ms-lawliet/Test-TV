@@ -8,8 +8,8 @@ from ClassTV import TV    # import class TV from ClassTV.py file
 try:
     # ask for user input
     name = input("Enter name of tv: ")
-    channel = int(input("Choose channel from 1-30: "))
-    volume_level = int(input("Choose volume level from 0-7: "))
+    channel = int(input("Choose channel from 1-120: "))
+    volume_level = int(input("Choose volume level from 1-7: "))
     on_off = input("Would you like to turn on your tv? (on or off) ")
 
     # create objects
@@ -17,7 +17,7 @@ try:
     tv2 = TV(name, channel, volume_level, on_off)
 
     # call methods
-    tv1.get_channel()
+    tv1.set_channel()
     tv1.print_details()
 
 except ValueError:
