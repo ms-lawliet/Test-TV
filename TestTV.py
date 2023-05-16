@@ -9,29 +9,36 @@ from ClassTV import TV    # import class TV from ClassTV.py file
 
 try:
     # ask for user input
-    name = input("Enter name of tv: ")
-    channel = int(input("Choose channel from 1-120: "))
-    volume_level = int(input("Choose volume level from 1-7: "))
-    on_off = input("Would you like to turn on your tv? (on or off) ")
+    while True:
+        name = input("Enter name of tv: ")
+        channel = int(input("Choose channel from 1-120: "))
+        volume_level = int(input("Choose volume level from 1-7: "))
+        on_off = input("Would you like to turn on your tv? (on or off) ")
 
-    def func_list():   # create a function to print list of class TV functions
-        method_list = input("Would you like to see other available tv functions? ")
-        if method_list == "yes":
-            for func in dir(TV):
-                if func.startswith('__'):
-                    continue
-                else:
-                    print(func)
-        elif method_list == "no":
-            exit()
+        # create objects for class TV
+        tv = TV(name, channel, volume_level, on_off)
 
-    # create objects for class TV
-    tv1 = TV(name, channel, volume_level, on_off)
-    tv2 = TV(name, channel, volume_level, on_off)
+        # call methods
+        tv.print_details()
 
-    # call methods
-    tv1.set_channel()
-    tv1.print_details()
+        # ask user for more input
+        more_input = input("Would you like to try again? \n")
+        if more_input == "yes":
+            continue
+        elif more_input == "no":
+            break
+
+        def func_list():  # create a function to print list of class TV functions
+            method_list = input("Would you like to see other available tv functions? ").lower()
+            if method_list == "yes":
+                for func in dir(TV):
+                    if func.startswith('__'):
+                        continue
+                    else:
+                        print(func)
+            elif method_list == "no":
+                print("Thank you!")
+                exit()
 
 except ValueError:
     print("Invalid input. Please try again.")
