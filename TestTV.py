@@ -22,5 +22,15 @@ try:
     tv1.set_channel()
     tv1.print_details()
 
+    method_list = input("Would you like to see other available tv functions? ")
+    if method_list == "yes":
+        for func in dir(TV):
+            if func.startswith('__'):
+                continue
+            else:
+                print(func)
+    elif method_list == "no":
+        exit()
+
 except ValueError:
     print("Invalid input. Please try again.")
