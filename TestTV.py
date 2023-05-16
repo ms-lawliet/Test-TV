@@ -14,23 +14,24 @@ try:
     volume_level = int(input("Choose volume level from 1-7: "))
     on_off = input("Would you like to turn on your tv? (on or off) ")
 
-    # create objects
+    def func_list():   # create a function to print list of class TV functions
+        method_list = input("Would you like to see other available tv functions? ")
+        if method_list == "yes":
+            for func in dir(TV):
+                if func.startswith('__'):
+                    continue
+                else:
+                    print(func)
+        elif method_list == "no":
+            exit()
+
+    # create objects for class TV
     tv1 = TV(name, channel, volume_level, on_off)
     tv2 = TV(name, channel, volume_level, on_off)
 
     # call methods
     tv1.set_channel()
     tv1.print_details()
-
-    method_list = input("Would you like to see other available tv functions? ")
-    if method_list == "yes":
-        for func in dir(TV):
-            if func.startswith('__'):
-                continue
-            else:
-                print(func)
-    elif method_list == "no":
-        exit()
 
 except ValueError:
     print("Invalid input. Please try again.")
