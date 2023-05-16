@@ -2,21 +2,18 @@
 
 # create class
 class TV:
-    def __init__(self, name, channel, volume_level, on_off):   # create class instances
+    def __init__(self, name, channel, volume_level):   # create class instances
         self.name = name
         self.channel = channel
         self.volume_level = volume_level
-        self.on_off = on_off
 
 # create required methods
     # turn tv on
     def turn_on(self):
-        self.on_off = "on"
         return "TV is turned on."
 
     # turn tv off
     def turn_off(self):
-        self.on_off = "off"
         return "TV is turned off."
 
     # get tv channel

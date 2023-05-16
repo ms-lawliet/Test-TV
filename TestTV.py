@@ -13,16 +13,16 @@ try:
         name = input("Enter name of tv: ")
         channel = int(input("Choose channel from 1-120: "))
         volume_level = int(input("Choose volume level from 1-7: "))
-        on_off = input("Would you like to turn on your tv? (on or off) ")
 
         # create objects for class TV
-        tv = TV(name, channel, volume_level, on_off)
+        tv = TV(name, channel, volume_level)
 
         # call methods
         tv.print_details()
 
         # ask user for more input
-        more_input = input("Would you like to try again? \n")
+        more_input = input("Would you like to try again? ")
+        print("\n")
         if more_input == "yes":
             continue
         elif more_input == "no":
