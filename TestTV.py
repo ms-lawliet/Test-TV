@@ -6,6 +6,7 @@
 from ClassTV import TV    # import class TV from ClassTV.py file
 
 try:
+    # ask for user input
     name = input("Enter name of tv: ")
     channel = int(input("Choose channel from 1-30: "))
     volume_level = int(input("Choose volume level from 0-7: "))
